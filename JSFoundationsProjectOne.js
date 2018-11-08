@@ -9,9 +9,25 @@
  *     returns [2, 4]
  *
  */
-function filterEvens(numbers) {
-	// your code goes here!
+ 
+
+function filterEvens(numbers) 
+{
+
+  let filteredArr = []
+
+	for (let i = 0 ; i < numbers.length ; i++)
+  	{
+	
+		if ( numbers[i] % 2 === 0 )
+			filteredArr.push(numbers[i])
+	
+	}
+  
+  return filteredArr
 }
+		
+
 
 /**
  * Receives an array of numbers
@@ -24,9 +40,29 @@ function filterEvens(numbers) {
  *     returns [1, 3, 5]
  *
  */
+ 
+
+
 function filterOdds(numbers) {
-	// your code goes here!
+	
+	
+  let filteredArr = []
+
+	for (let i = 0 ; i < numbers.length ; i++)
+  	{
+	
+		if ( numbers[i] % 2 !== 0 )
+			filteredArr.push(numbers[i])
+	
+		}
+  
+  return filteredArr
+	
 }
+
+
+
+
 
 /**
  * Receives an array of numbers
@@ -38,9 +74,28 @@ function filterOdds(numbers) {
  *     returns 9
  *
  */
+
+
 function sumOdds(numbers) {
-	// your code goes here!
-}
+ 
+ let total = 0
+	for (let i =0 ; i < numbers.length ; i++)
+	{
+	
+		if ( numbers[i] % 2 === 0 )
+			numbers.splice(i,1)
+      
+	total += numbers[i]
+	}
+  
+  
+  return total
+
+ }
+
+
+
+
 
 /**
  * Receives an array of names
@@ -59,7 +114,17 @@ function sumOdds(numbers) {
  * 
  */
 function makePairs(names) {
-	// your code goes here!
+
+let array = []
+let i = 0
+
+do {
+  array.push(names.slice(i,i+2));
+  i+=2;
+  
+}while (i < names.length)
+
+return array;
 }
 
 /**************************************************
