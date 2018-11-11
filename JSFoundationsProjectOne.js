@@ -76,22 +76,75 @@ function filterOdds(numbers) {
  */
 
 
-function sumOdds(numbers) {
- 
- let total = 0
-	for (let i =0 ; i < numbers.length ; i++)
-	{
-	
-		if ( numbers[i] % 2 === 0 )
-			numbers.splice(i,1)
-      
-	total += numbers[i]
-	}
-  
-  
-  return total
 
- }
+/*
+let Arr = [1,3,5,7,8,4,2]
+
+
+/*
+
+
+==============================
+Solution 1 
+==============================
+
+function sumOdds (numbers){
+  
+  let x = filterOdds(numbers)
+  let total = 0
+  for ( let j  = 0 ; j < x.length ; j ++)
+    {
+      total +=x[j]
+    }
+ 
+  return total
+}
+
+let summ = sumOdds(Arr)
+console.log(summ)
+
+
+===============================================
+Solution 2
+================================================
+
+
+function sumOdds (numbers){
+  
+  let total = 0
+  for ( let j  = 0 ; j < numbers.length ; j ++)
+    {
+      if ( numbers[j] % 2 !== 0)
+      total +=numbers[j]
+    }
+ 
+  return total
+}
+
+
+let summ = sumOdds(Arr)
+console.log(summ)
+
+*/
+
+
+
+
+
+function sumOdds (numbers){
+  
+  let x = filterOdds(numbers)
+  let total = 0
+  for ( let j  = 0 ; j < x.length ; j ++)
+    {
+      total +=x[j]
+    }
+ 
+  return total
+}
+
+let summ = sumOdds(numbers)
+console.log(summ)
 
 
 
